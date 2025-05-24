@@ -1,0 +1,32 @@
+<!DOCTYPE html>  
+
+<html lang="en">
+<body>
+<table align="center" height="500px" class="table table-hover"  >
+<thead>
+    <tr align="center">
+        <th scope="col">#:</td>
+        <th scope="col">วันที่:</td>
+        <th scope="col">จำนวนคน:</td>
+        <th scope="col">จำนวนรถ:</td>
+        <th scope="col">สวมหมวก:</td>
+        <th scope="col">ไม่สวมหมวก:</td>
+        <th scope="col">สถานะ:</td>
+    </tr>
+</thead>
+<tbody>
+{% for row in dbhtml %}
+    <tr>
+        <td align="center">{{row.0}}</td>
+        <td align="center">{{row.1}}</td>
+        <td align="center">{{row.2}}</td>
+        <td align="center">{{row.3}}</td>
+        <td align="center">{{row.4}}</td>
+        <td align="center">{{row.5}}</td>
+        <td align="center"><img src="{{ row.6 }}" class="img-rounded" alt="Cinque Terre"></td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>
